@@ -26,6 +26,7 @@ namespace MicroServiceCQRS.Services.Api.Configurations
         {
             if (app == null) throw new ArgumentNullException(nameof(app));
 
+
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
