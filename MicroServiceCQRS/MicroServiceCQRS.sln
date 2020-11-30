@@ -13,19 +13,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Domain", "4 - Domain", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra", "5 - Infra", "{A3821D7C-0299-4457-BB9A-D6367D9AB67B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceCQRS.Services.Api", "MicroServiceCQRS.Services.Api\MicroServiceCQRS.Services.Api.csproj", "{6D031ABA-D7FF-4549-8865-EF79E17030EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceCQRS.Services.Api", "MicroServiceCQRS.Services.Api\MicroServiceCQRS.Services.Api.csproj", "{6D031ABA-D7FF-4549-8865-EF79E17030EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceCQRS.Application", "MicroServiceCQRS.Application\MicroServiceCQRS.Application.csproj", "{6343F952-DBA4-4B6B-B567-DF65D699B497}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceCQRS.Application", "MicroServiceCQRS.Application\MicroServiceCQRS.Application.csproj", "{6343F952-DBA4-4B6B-B567-DF65D699B497}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceCQRS.Domain", "MicroServiceCQRS.Domain\MicroServiceCQRS.Domain.csproj", "{AE8E5772-A2B3-427A-9645-4737BB262D46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceCQRS.Domain", "MicroServiceCQRS.Domain\MicroServiceCQRS.Domain.csproj", "{AE8E5772-A2B3-427A-9645-4737BB262D46}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.1 - Data", "5.1 - Data", "{C27D2FA5-0075-4ED9-A3D8-A75C0DB2876C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.2 - CrossCutting", "5.2 - CrossCutting", "{02E2A9D2-A4F3-4F11-9C29-0A7558943EA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceCQRS.Infra.Data", "MicroServiceCQRS.Infra.Data\MicroServiceCQRS.Infra.Data.csproj", "{FB3B9C62-4F31-4C80-AFC1-3C816F641180}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceCQRS.Infra.Data", "MicroServiceCQRS.Infra.Data\MicroServiceCQRS.Infra.Data.csproj", "{FB3B9C62-4F31-4C80-AFC1-3C816F641180}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceCQRS.CrossCutting.IoC", "MicroServiceCQRS.CrossCutting.IoC\MicroServiceCQRS.CrossCutting.IoC.csproj", "{D0372CAA-DA29-4320-A171-7CE8BE377827}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MicroServiceCQRS.CrossCutting.IoC", "MicroServiceCQRS.CrossCutting.IoC\MicroServiceCQRS.CrossCutting.IoC.csproj", "{D0372CAA-DA29-4320-A171-7CE8BE377827}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceCQRS.CrossCutting.Bus", "MicroServiceCQRS.CrossCutting.Bus\MicroServiceCQRS.CrossCutting.Bus.csproj", "{87FDE7AD-199E-4466-A70C-DEE832D9E3D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicroServiceCQRS.CrossCutting.Utils", "MicroServiceCQRS.CrossCutting.Utils\MicroServiceCQRS.CrossCutting.Utils.csproj", "{A735DB16-231D-432C-9006-6FBEF75A6927}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,14 @@ Global
 		{D0372CAA-DA29-4320-A171-7CE8BE377827}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0372CAA-DA29-4320-A171-7CE8BE377827}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0372CAA-DA29-4320-A171-7CE8BE377827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87FDE7AD-199E-4466-A70C-DEE832D9E3D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87FDE7AD-199E-4466-A70C-DEE832D9E3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87FDE7AD-199E-4466-A70C-DEE832D9E3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87FDE7AD-199E-4466-A70C-DEE832D9E3D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A735DB16-231D-432C-9006-6FBEF75A6927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A735DB16-231D-432C-9006-6FBEF75A6927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A735DB16-231D-432C-9006-6FBEF75A6927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A735DB16-231D-432C-9006-6FBEF75A6927}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +77,8 @@ Global
 		{02E2A9D2-A4F3-4F11-9C29-0A7558943EA4} = {A3821D7C-0299-4457-BB9A-D6367D9AB67B}
 		{FB3B9C62-4F31-4C80-AFC1-3C816F641180} = {C27D2FA5-0075-4ED9-A3D8-A75C0DB2876C}
 		{D0372CAA-DA29-4320-A171-7CE8BE377827} = {02E2A9D2-A4F3-4F11-9C29-0A7558943EA4}
+		{87FDE7AD-199E-4466-A70C-DEE832D9E3D2} = {02E2A9D2-A4F3-4F11-9C29-0A7558943EA4}
+		{A735DB16-231D-432C-9006-6FBEF75A6927} = {02E2A9D2-A4F3-4F11-9C29-0A7558943EA4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E96F2469-C4AA-4B65-8FE1-C6F98A173E97}

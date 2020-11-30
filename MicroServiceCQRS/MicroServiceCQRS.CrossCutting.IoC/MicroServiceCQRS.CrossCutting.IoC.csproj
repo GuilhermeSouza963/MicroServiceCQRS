@@ -8,4 +8,9 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MicroServiceCQRS.CrossCutting.Bus\MicroServiceCQRS.CrossCutting.Bus.csproj" />
+    <ProjectReference Include="..\MicroServiceCQRS.Infra.Data\MicroServiceCQRS.Infra.Data.csproj" />
+  </ItemGroup>
+
 </Project>

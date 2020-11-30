@@ -25,5 +25,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.4.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MicroServiceCQRS.Application\MicroServiceCQRS.Application.csproj" />
+    <ProjectReference Include="..\MicroServiceCQRS.CrossCutting.IoC\MicroServiceCQRS.CrossCutting.IoC.csproj" />
+  </ItemGroup>
+
 
 </Project>
