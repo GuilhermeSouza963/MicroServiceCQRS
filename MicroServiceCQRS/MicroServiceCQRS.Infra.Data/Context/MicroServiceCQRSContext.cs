@@ -3,6 +3,8 @@ using MicroServiceCQRS.CrossCutting.Bus.Interfaces;
 using MicroServiceCQRS.CrossCutting.Utils.Data;
 using MicroServiceCQRS.CrossCutting.Utils.Domain;
 using MicroServiceCQRS.CrossCutting.Utils.Messaging;
+using MicroServiceCQRS.Domain.Entities;
+using MicroServiceCQRS.Infra.Data.Mappings;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
@@ -20,18 +22,16 @@ namespace MicroServiceCQRS.Infra.Data.Context
             ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
-        //public DbSet<Customer> Customers { get; set; }
+        public DbSet<Objeto> Objetos { get; set; }
+        public DbSet<DisciplinaObjeto> DisciplinaObjetos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Ignore<ValidationResult>();
             modelBuilder.Ignore<Event>();
 
-            foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
-                e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
-                property.SetColumnType("varchar(100)");
-
-            //modelBuilder.ApplyConfiguration(new CustomerMap());
+            modelBuilder.ApplyConfiguration(new DisciplinaObjetoMap());
+            modelBuilder.ApplyConfiguration(new ObjetoMap());
 
             base.OnModelCreating(modelBuilder);
         }

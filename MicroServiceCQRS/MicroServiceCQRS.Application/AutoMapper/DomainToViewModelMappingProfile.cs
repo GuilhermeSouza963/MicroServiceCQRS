@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using MicroServiceCQRS.Application.ViewModels;
+using MicroServiceCQRS.Domain.Entities;
 
 namespace MicroServiceCQRS.Application.AutoMapper
 {
@@ -6,7 +8,8 @@ namespace MicroServiceCQRS.Application.AutoMapper
     {
         public DomainToViewModelMappingProfile()
         {
-            //CreateMap<Customer, CustomerViewModel>();
+           CreateMap<Objeto, ObjetoViewModel>();
+            CreateMap<DisciplinaObjeto, DisciplinaObjetoViewModel>();
         }
     }
 }

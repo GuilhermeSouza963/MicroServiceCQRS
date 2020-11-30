@@ -5,15 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Services\" />
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="9.0.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
-    <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
+    <ProjectReference Include="..\MicroServiceCQRS.CrossCutting.Bus\MicroServiceCQRS.CrossCutting.Bus.csproj" />
+    <ProjectReference Include="..\MicroServiceCQRS.Domain\MicroServiceCQRS.Domain.csproj" />
   </ItemGroup>
 
 </Project>

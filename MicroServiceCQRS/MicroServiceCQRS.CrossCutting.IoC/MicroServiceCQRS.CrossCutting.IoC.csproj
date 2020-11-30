@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MicroServiceCQRS.Application\MicroServiceCQRS.Application.csproj" />
     <ProjectReference Include="..\MicroServiceCQRS.CrossCutting.Bus\MicroServiceCQRS.CrossCutting.Bus.csproj" />
     <ProjectReference Include="..\MicroServiceCQRS.Infra.Data\MicroServiceCQRS.Infra.Data.csproj" />
   </ItemGroup>
