@@ -27,20 +27,20 @@ namespace MicroServiceCQRS.Services.Api.Controllers
         
 
         [AllowAnonymous]
-        [HttpGet("aviso")]
+        [HttpGet("")]
         public async Task<IEnumerable<ObjetoViewModel>> Get()
         {
             return await _objetoAppService.GetAll();
         }
 
         [AllowAnonymous]
-        [HttpGet("aviso/{id:int}")]
+        [HttpGet("{id:int}")]
         public async Task<ObjetoViewModel> Get(int id)
         {
             return await _objetoAppService.GetById(id);
         }
 
-        [HttpPost("aviso")]
+        [HttpPost("add")]
         public async Task<IActionResult> Post([FromBody] ObjetoViewModel objetoViewModel)
         {
             return !ModelState.IsValid ? CustomResponse(ModelState) : CustomResponse(await _objetoAppService.Add(objetoViewModel));

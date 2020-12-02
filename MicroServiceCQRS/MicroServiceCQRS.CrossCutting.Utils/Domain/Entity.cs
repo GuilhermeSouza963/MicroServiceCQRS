@@ -1,6 +1,7 @@
 ﻿using MicroServiceCQRS.CrossCutting.Utils.Messaging;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MicroServiceCQRS.CrossCutting.Utils.Domain
 {
@@ -10,7 +11,7 @@ namespace MicroServiceCQRS.CrossCutting.Utils.Domain
         {
             Id = Guid.NewGuid();
         }
-
+        [NotMapped]
         public Guid Id { get; set; }
 
         private List<Event> _domainEvents;

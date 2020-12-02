@@ -15,7 +15,7 @@ namespace MicroServiceCQRS.Infra.Data.Context
     {
         private readonly IMediatorHandler _mediatorHandler;
 
-        public MicroServiceCQRSContext(DbContextOptions<MicroServiceCQRSContext> options, IMediatorHandler mediatorHandler)
+        public MicroServiceCQRSContext(DbContextOptions<MicroServiceCQRSContext> options, IMediatorHandler mediatorHandler) : base(options)
         {
             _mediatorHandler = mediatorHandler;
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
@@ -24,6 +24,13 @@ namespace MicroServiceCQRS.Infra.Data.Context
 
         public DbSet<Objeto> Objetos { get; set; }
         public DbSet<DisciplinaObjeto> DisciplinaObjetos { get; set; }
+        public DbSet<Modelo> Modelos { get; set; }
+        public DbSet<ObjetoAvaliacao> ObjetoAvaliacaos { get; set; }
+        public DbSet<ObjetoBibliotecaVirtual> ObjetoBibliotecaVirtuals { get; set; }
+        public DbSet<ObjetoForum> ObjetoForums { get; set; }
+        public DbSet<ObjetoTipo> ObjetoTipos { get; set; }
+        public DbSet<ObjetoTrabalho> ObjetoTrabalhos { get; set; }
+        public DbSet<Pessoa> Pessoas { get; set; }        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -32,6 +39,13 @@ namespace MicroServiceCQRS.Infra.Data.Context
 
             modelBuilder.ApplyConfiguration(new DisciplinaObjetoMap());
             modelBuilder.ApplyConfiguration(new ObjetoMap());
+            modelBuilder.ApplyConfiguration(new ModeloMap());
+            modelBuilder.ApplyConfiguration(new ObjetoAvaliacaoMap());
+            modelBuilder.ApplyConfiguration(new ObjetoBibliotecaVirtualMap());
+            modelBuilder.ApplyConfiguration(new ObjetoForumMap());
+            modelBuilder.ApplyConfiguration(new ObjetoTipoMap());
+            modelBuilder.ApplyConfiguration(new ObjetoTrabalhoMap());
+            modelBuilder.ApplyConfiguration(new PessoaMap());
 
             base.OnModelCreating(modelBuilder);
         }

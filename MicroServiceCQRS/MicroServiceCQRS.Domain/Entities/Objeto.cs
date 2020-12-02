@@ -1,6 +1,7 @@
 ﻿using MicroServiceCQRS.CrossCutting.Utils.Domain;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 
@@ -36,6 +37,7 @@ namespace MicroServiceCQRS.Domain.Entities
 
         }
 
+        [DatabaseGenerated(System.ComponentModel.DataAnnotations.Schema.DatabaseGeneratedOption.Identity)]
         public int ObjetoId { get; set; } // ObjetoID (Primary key)
         public int? ObjetoIdPai { get; private set; } // ObjetoIDPai
         public int? ObjetoIdPaiPrincipal { get; private set; } // ObjetoIDPai
@@ -62,6 +64,17 @@ namespace MicroServiceCQRS.Domain.Entities
 
         public List<Objeto> ObjetoFilhos { get; set; } // TrabalhoPessoaObjeto.fkObjeto_TrabalhoPessoaObjeto
 
+        public ObjetoTrabalho ObjetoTrabalho { get; set; } // ObjetoTrabalho.fkObjeto_ObjetoTrabalho
+        public ObjetoAvaliacao ObjetoAvaliacao { get; set; }
+        public ObjetoForum ObjetoForum { get; set; }
+        public ObjetoBibliotecaVirtual ObjetoBibliotecaVirtual { get; set; }
+
+        [ForeignKey("ObjetoIdPai")]
+        public Objeto ObjetoPai { get; set; }
+        public virtual Pessoa Pessoa { get; set; }
+
+        public ObjetoTipo ObjetoTipo { get; set; } // fkObjetoTipo_Objeto
+        public Modelo Modelo { get; set; } // fkObjetoTipo_Objeto
         public bool PossuiAnexo
         {
             get
